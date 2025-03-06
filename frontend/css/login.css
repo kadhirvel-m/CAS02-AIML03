@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Container */
+.head-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(22, 149, 84, 0.1);
+    overflow: hidden;
+    color:#590696
+}
+
+/* Login Section */
+.login-section {
+    flex: 1;
+    padding: 30px;
+    text-align: center;
+    background-color: #ffffff;
+    min-width: 300px;
+}
+
+.login-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.avatars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.avatars img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+p {
+    color: #4d494f;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color:#590696;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#590696;
+}
+
+/* Info Section */
+.info-section {
+    flex: 1;
+    background-color:#f8f9fa;
+    padding: 30px;
+    min-width: 300px;
+}
+
+.info-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color:#320354
+}
+
+/* Features */
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color:#590696
+}
+
+.feature img.feature-icon {
+    width: 80px; /* Adjust for rectangle shape */
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .info-section {
+        text-align: center;
+    }
+    
+    .feature {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .feature img.feature-icon {
+        width: 100px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+}
