@@ -12,27 +12,22 @@
         <button type="submit">Analyze</button>
     </form>
 
-    {% if sentiment_counts is not none %}
+    {% if tweet_data %}
         <h2>Sentiment Analysis Results</h2>
-        <ul>
-            {% for index, row in sentiment_counts.iterrows() %}
-                <li>{{ row["Sentiment"] }}: {{ row["Count"] }}</li>
-            {% endfor %}
-        </ul>
-
-        <h2>Individual Tweets and Sentiment</h2>
-        <table border="1">
+        <table>
             <tr>
                 <th>Tweet</th>
                 <th>Sentiment</th>
             </tr>
-            {% for tweet in tweet_data %}
-                <tr>
-                    <td>{{ tweet["Tweet"] }}</td>
-                    <td>{{ tweet["Sentiment"] }}</td>
-                </tr>
+            {% for data in tweet_data %}
+            <tr>
+                <td>{{ data['Tweet'] }}</td>
+                <td>{{ data['Sentiment'] }}</td>
+            </tr>
             {% endfor %}
         </table>
+    {% else %}
+        <p>No tweets found. Try another brand.</p>
     {% endif %}
 </body>
 </html>
