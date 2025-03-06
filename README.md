@@ -12,67 +12,41 @@ This system enhances the existing AI-Powered Social Media Sentiment Analysis for
 
 ## Tech Stack
 
-#### Tech Stack
-
-- Sentiment Analysis: RoBERTa (Hugging Face Transformers),VADER for sentiment classification.
-
+#### Sentiment Analysis: 
+- RoBERTa (Hugging Face Transformers),VADER for sentiment classification.
 #### Large Language Model (LLM):
-
 - Mistral AI for generating insights and powering the chatbot.
-
 #### Data Collection:
-
 - Tweepy (Twitter API) for fetching tweets.
-
 #### Data Preprocessing:
-
 - spaCy and Regex for cleaning and preprocessing tweets.
-
 #### Visualization:
-
 - Matplotlib, Chartjs and Streamlit for interactive dashboards.
-
 #### Backend:
-
 - Flask for serving the Mistral AI model and chatbot.
-
+- 
 ## Uniqueness
-
 #### Comprehensive Insights:
-
 - Combines sentiment analysis with Mistral AI to provide positive factors, negative factors, neutral factors and recommendations.
-
 ##### Interactive Chatbot:
-
 A business intelligence chatbot powered by Mistral AI allows users to query the system for deeper insights (e.g., "What are the most common complaints about my brand?").
-
 ##### Real-Time Analysis:
-
 Fetches and analyzes tweets in real-time, providing up-to-date insights.
-
 ##### Actionable Recommendations:
-
 Goes beyond sentiment classification to offer actionable business intelligence.
 
 ## Feasibility
-
 #### Technical Feasibility
-
 - All components (RoBERTa, VADER, Mistral AI, Tweepy, etc.) are well-documented and widely used.
 - Mistral AI can be integrated via APIs or locally hosted models.
 - The system can be built using open-source tools, reducing costs.
-
 #### Economic Feasibility
-
 - The system provides high value to brands by offering actionable insights, making it a worthwhile investment.
-
 #### Operational Feasibility
-
 - The system is user-friendly, with an interactive drag and drop dashboard and chatbot.
 - It can be easily maintained and updated with new models or features.
 
 ## Deliverables
-
 At the end of the **AI-Powered Social Media Sentiment Analysis with Mistral AI Integration** project, the following will be delivered:
 
 #### 1. Sentiment Analysis Model
