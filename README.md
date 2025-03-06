@@ -1,8 +1,7 @@
 ## Team ID: CAS02
 ## Problem Statement ID: AIML03
 ## Problem Statement:
-#### Sentiment analysis model to categorize tweets into positive, negative, or neutral
-sentiments.
+#### Sentiment analysis model to categorize tweets into positive, negative, or neutral sentiments.
 
 ## Approach
 This system enhances the existing AI-Powered Social Media Sentiment Analysis for Brands by integrating Mistral AI, a large language model (LLM), to provide positive factors, negative factors, and a business intelligence chatbot. The system will analyze tweets, classify sentiment, and use Mistral AI to generate actionable insights and recommendations for brands. The chatbot will allow users to interactively query the system for deeper insights.
