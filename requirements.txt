@@ -1,0 +1,6 @@
+tweepy
+spacy
+pandas
+plotly
+streamit
+transfotmers

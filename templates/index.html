@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sentiment Analysis</title>
+</head>
+<body>
+    <h1>AI-Powered Social Media Sentiment Analysis</h1>
+    <form method="post">
+        <input type="text" name="keyword" placeholder="Enter a keyword or brand name" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if sentiment_counts is not none %}
+        <h2>Sentiment Analysis Results</h2>
+        <ul>
+            {% for index, row in sentiment_counts.iterrows() %}
+                <li>{{ row["Sentiment"] }}: {{ row["Count"] }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Individual Tweets and Sentiment</h2>
+        <table border="1">
+            <tr>
+                <th>Tweet</th>
+                <th>Sentiment</th>
+            </tr>
+            {% for tweet in tweet_data %}
+                <tr>
+                    <td>{{ tweet["Tweet"] }}</td>
+                    <td>{{ tweet["Sentiment"] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>
