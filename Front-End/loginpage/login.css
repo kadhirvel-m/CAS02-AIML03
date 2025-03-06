@@ -11,10 +11,10 @@ body {
 }
 
 /* Container */
-.head-container {
+.container {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
     background: #fff;
     border-radius: 10px;
@@ -133,3 +133,5 @@ button:hover {
         margin-bottom: 10px;
     }
 }
+
+@media (max-width: 
