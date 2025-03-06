@@ -5,3 +5,4 @@ plotly
 streamit
 transfotmers
 scipy
+keras
