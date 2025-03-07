@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+        }
+        .card {
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-weight: bold;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .positive {
+            color: #198754;
+            font-weight: bold;
+        }
+        .negative {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .list-group-item {
+            border: none;
+            padding: 8px 0;
+        }
+        .back-btn {
+            background-color: #007bff;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card p-4">
+            <h3 class="text-center mb-4">Sentiment Analysis Result</h3>
+
+            <div>
+                <p class="section-title">Overall Sentiment</p>
+                <p class="fs-5">{{ analysis.split('**1. Overall Sentiment:**')[1].split('**2. Overall Insight:**')[0].strip() }}</p>
+            </div>
+
+            <div>
+                <p class="section-title">Overall Insight</p>
+                {% set sentiment_split = analysis.split('**1. Overall Sentiment:**') %}
+                {% if sentiment_split|length > 1 %}
+                    {% set sentiment = sentiment_split[1].split('**2. Overall Insight:**')[0].strip() %}
+                    <p class="fs-5">{{ sentiment }}</p>
+                {% else %}
+                    <p class="fs-5 text-danger">Error: Sentiment data not found.</p>
+                {% endif %}
+            </div>
+
+            <div>
+                <p class="section-title positive">Positive Factors</p>
+                <ul class="list-group">
+                    {% for factor in analysis.split('**3. Positive Factors:**')[1].split('**4. Negative Factors:**')[0].split('*') if factor.strip() %}
+                        <li class="list-group-item"><span class="positive">✔</span> {{ factor.strip() }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="mt-3">
+                <p class="section-title negative">Negative Factors</p>
+                <ul class="list-group">
+                    {% for factor in analysis.split('**4. Negative Factors:**')[1].split('*') if factor.strip() %}
+                        <li class="list-group-item"><span class="negative">✖</span> {{ factor.strip() }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <a href="/" class="btn back-btn w-100 mt-4">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
